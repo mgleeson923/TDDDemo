@@ -9,25 +9,21 @@ public class BoomFizz {
         // otherwise print the number
         String boom = "Boom";
 
-        for (int i = 1; i < number + 1 ; i++) {
-////            int k = i;
-////            while (k > 0) {
-////                int j = k % 10;
-////                j = j / 10;
-////                if (j == 7) {
-////                    System.out.println(boom);
-////                }
-//
-//
-//            }
-            if (i%7 != 0) {
-                System.out.println(i);
-            }
-            if (i%7 == 0){
+        for (int i = 1; i < number + 1; i++) {
+            if (i % 7 == 0) {
                 System.out.println(boom);
             }
-
-
+            else {
+                int j = i;
+                while (j > 0) {
+                    if (j % 10 == 7) {
+                        System.out.println(boom);
+                        i++;
+                    }
+                    j = j / 10;
+                }
+                System.out.println(i);
+            }
         }
         return "";
     }
